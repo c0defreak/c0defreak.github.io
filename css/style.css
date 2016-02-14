@@ -171,7 +171,7 @@ code {
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
-  background-image: url("images/logo.png");
+  background-image: url("images/profile.png");
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
@@ -1865,6 +1865,8 @@ ol.toc {
 .highlight {
   color: #ddd;
   background: #272822;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 .highlight .code .tag,
 .highlight .code .keyword,
