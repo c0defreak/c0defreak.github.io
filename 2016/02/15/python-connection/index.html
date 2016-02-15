@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>projects | /dev/null</title>
+    <title>Checking internet connection with python | /dev/null</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:type" content="website">
-<meta property="og:title" content="projects">
-<meta property="og:url" content="http://c0defreak.github.io/projects/index.html">
+    <meta name="description" content="I was working on a project where I need to check the internet connection and external IP address. So I come up with this little script.
+net_tools.py12345678910111213141516171819202122import urllib2def">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Checking internet connection with python">
+<meta property="og:url" content="http://c0defreak.github.io/2016/02/15/python-connection/index.html">
 <meta property="og:site_name" content="/dev/null">
-<meta property="og:description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:updated_time" content="2016-02-14T15:47:01.916Z">
+<meta property="og:description" content="I was working on a project where I need to check the internet connection and external IP address. So I come up with this little script.
+net_tools.py12345678910111213141516171819202122import urllib2def">
+<meta property="og:updated_time" content="2016-02-15T18:12:07.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="projects">
-<meta name="twitter:description" content="Here Some recent project done by me
-Django-Bookmarks">
+<meta name="twitter:title" content="Checking internet connection with python">
+<meta name="twitter:description" content="I was working on a project where I need to check the internet connection and external IP address. So I come up with this little script.
+net_tools.py12345678910111213141516171819202122import urllib2def">
     
 
     
@@ -149,7 +149,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-python-connection" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -158,7 +158,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            projects
+            Checking internet connection with python
         </h1>
     
 
@@ -166,24 +166,32 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/projects/index.html">
-            <time datetime="2016-02-14T11:02:35.000Z" itemprop="datePublished">2016-02-14</time>
+        <a href="/2016/02/15/python-connection/">
+            <time datetime="2016-02-15T18:10:26.000Z" itemprop="datePublished">2016-02-15</time>
         </a>
     </div>
 
 
                     
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
                     
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/python/">python</a>
+    </div>
+
                 </div>
             </header>
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="Here-Some-recent-project-done-by-me"><a href="#Here-Some-recent-project-done-by-me" class="headerlink" title="Here Some recent project done by me"></a>Here Some recent project done by me</h3><ul>
-<li><a href="https://github.com/c0defreak/Django-bookmarks" target="_blank" rel="external">Django-Bookmarks</a></li>
-</ul>
-
+            <p>I was working on a project where I need to check the internet connection and external IP address. So I come up with this little script.</p>
+<figure class="highlight python"><figcaption><span>net_tools.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_ip</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        req = urllib2.Request(<span class="string">"http://icanhazip.com"</span>)</span><br><span class="line">        res = urllib2.urlopen(req)</span><br><span class="line">        <span class="keyword">return</span> res.read()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_conn</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = urllib2.urlopen(<span class="string">"https://www.google.com"</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">except</span> urllib2.URLError <span class="keyword">as</span> err:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">print</span> check_ip()</span><br><span class="line">    <span class="keyword">print</span> check_conn()</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -193,7 +201,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://c0defreak.github.io/projects/index.html" data-id="cikocdq660007ln0ljswu5vsw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://c0defreak.github.io/2016/02/15/python-connection/" data-id="cikocdq7f000fln0l4jiu29xa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -260,16 +268,49 @@ ga('send', 'pageview');
 </script>
 
             
+    
+        <a href="http://c0defreak.github.io/2016/02/15/python-connection/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/15/python-connection/">Comments</a>
+    
+
         </footer>
     </div>
     
         
+<nav id="article-nav">
+    
+        <a href="/2016/02/16/python-virtualenv/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Getting started python virtualenvwrapper
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2016/02/15/hexo-github/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Create a Hexo blog and deploy to Github</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
 
 
     
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -400,13 +441,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'devnulls';
     
     
-    var disqus_url = 'http://c0defreak.github.io/projects/index.html';
+    var disqus_url = 'http://c0defreak.github.io/2016/02/15/python-connection/';
     
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

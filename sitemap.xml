@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://c0defreak.github.io/404.html</loc>
+    <loc>http://c0defreak.github.io/2016/02/16/python-virtualenv/</loc>
     
-    <lastmod>2016-02-15T07:51:36.652Z</lastmod>
+    <lastmod>2016-02-15T18:56:10.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://c0defreak.github.io/2016/02/15/python-connection/</loc>
+    
+    <lastmod>2016-02-15T18:12:07.924Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://c0defreak.github.io/2016/02/14/Hexo/</loc>
+    
+    <lastmod>2016-02-15T18:04:05.837Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>http://c0defreak.github.io/2016/02/15/hexo-github/</loc>
     
     <lastmod>2016-02-15T07:02:01.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://c0defreak.github.io/2016/02/14/Hexo/</loc>
-    
-    <lastmod>2016-02-15T07:00:41.348Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://c0defreak.github.io/google03dcf28bd0da1052.html</loc>
-    
-    <lastmod>2016-02-14T16:59:11.645Z</lastmod>
     
   </url>
   

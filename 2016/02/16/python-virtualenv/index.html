@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>projects | /dev/null</title>
+    <title>Getting started python virtualenvwrapper | /dev/null</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:type" content="website">
-<meta property="og:title" content="projects">
-<meta property="og:url" content="http://c0defreak.github.io/projects/index.html">
+    <meta name="description" content="What is virtualenvvirtualenv is a tool to create isolated Python environments.
+The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an ap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting started python virtualenvwrapper">
+<meta property="og:url" content="http://c0defreak.github.io/2016/02/16/python-virtualenv/index.html">
 <meta property="og:site_name" content="/dev/null">
-<meta property="og:description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:updated_time" content="2016-02-14T15:47:01.916Z">
+<meta property="og:description" content="What is virtualenvvirtualenv is a tool to create isolated Python environments.
+The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an ap">
+<meta property="og:updated_time" content="2016-02-15T18:56:10.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="projects">
-<meta name="twitter:description" content="Here Some recent project done by me
-Django-Bookmarks">
+<meta name="twitter:title" content="Getting started python virtualenvwrapper">
+<meta name="twitter:description" content="What is virtualenvvirtualenv is a tool to create isolated Python environments.
+The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an ap">
     
 
     
@@ -149,7 +149,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-python-virtualenv" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -158,7 +158,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            projects
+            Getting started python virtualenvwrapper
         </h1>
     
 
@@ -166,23 +166,43 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/projects/index.html">
-            <time datetime="2016-02-14T11:02:35.000Z" itemprop="datePublished">2016-02-14</time>
+        <a href="/2016/02/16/python-virtualenv/">
+            <time datetime="2016-02-15T18:56:10.000Z" itemprop="datePublished">2016-02-16</time>
         </a>
     </div>
 
 
                     
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
                     
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/python/">python</a>
+    </div>
+
                 </div>
             </header>
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="Here-Some-recent-project-done-by-me"><a href="#Here-Some-recent-project-done-by-me" class="headerlink" title="Here Some recent project done by me"></a>Here Some recent project done by me</h3><ul>
-<li><a href="https://github.com/c0defreak/Django-bookmarks" target="_blank" rel="external">Django-Bookmarks</a></li>
-</ul>
+            <h2 id="What-is-virtualenv"><a href="#What-is-virtualenv" class="headerlink" title="What is virtualenv"></a>What is virtualenv</h2><blockquote><p><code>virtualenv</code> is a tool to create isolated Python environments.</p>
+<p>The basic problem being addressed is one of dependencies and versions, and indirectly permissions. Imagine you have an application that needs version 1 of LibFoo, but another application requires version 2. How can you use both these applications? If you install everything into <code>/usr/lib/python2.7/site-packages</code> (or whatever your platform’s standard location is), it’s easy to end up in a situation where you unintentionally upgrade an application that shouldn’t be upgraded.</p>
+<p>Or more generally, what if you want to install an application and leave it be? If an application works, any change in its libraries or the versions of those libraries can break the application.</p>
+<p>Also, what if you can’t install packages into the global <code>site-packages</code> directory? For instance, on a shared host.</p>
+<p>In all these cases, <code>virtualenv</code> can help you. It creates an environment that has its own installation directories, that doesn’t share libraries with other virtualenv environments (and optionally doesn’t access the globally installed libraries either).</p>
+<footer><strong>From the official doc</strong><cite><a href="https://virtualenv.readthedocs.org/en/latest/" target="_blank" rel="external">virtualenvdoc</a></cite></footer></blockquote>
+<h2 id="What-is-virtualenvwrapper"><a href="#What-is-virtualenvwrapper" class="headerlink" title="What is virtualenvwrapper"></a>What is virtualenvwrapper</h2><blockquote><p>virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.</p>
+<footer><strong>From the official doc</strong><cite><a href="https://virtualenvwrapper.readthedocs.org/en/latest/" target="_blank" rel="external">virtualenvwrapper</a></cite></footer></blockquote>
+<h2 id="Install-virtualenvwrapper"><a href="#Install-virtualenvwrapper" class="headerlink" title="Install virtualenvwrapper"></a>Install virtualenvwrapper</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
+<h2 id="Setup-virtualenvwrapper"><a href="#Setup-virtualenvwrapper" class="headerlink" title="Setup virtualenvwrapper"></a>Setup virtualenvwrapper</h2><p>Edit your .bashrc with following content<br><figure class="highlight bash"><figcaption><span>.bashrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> WORKON_HOME = ~/.virtualenvs</span><br><span class="line"><span class="built_in">source</span> /usr/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure></p>
+<h2 id="Make-virtualenv"><a href="#Make-virtualenv" class="headerlink" title="Make virtualenv"></a>Make virtualenv</h2><p>For creating a new virtualenv run<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv hello_env</span><br></pre></td></tr></table></figure><br>Now install required package<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(hello_env)$ pip install selenium</span><br></pre></td></tr></table></figure></p>
+<h2 id="Working-with-virtualenv"><a href="#Working-with-virtualenv" class="headerlink" title="Working with virtualenv"></a>Working with virtualenv</h2><p>To activate a virtualenv run<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">workon hello_env</span><br></pre></td></tr></table></figure><br>To deactivate<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure></p>
+<p>For more info head to <a href="https://virtualenvwrapper.readthedocs.org/en/latest/" target="_blank" rel="external">official documentaion</a></p>
 
         
         </div>
@@ -193,7 +213,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://c0defreak.github.io/projects/index.html" data-id="cikocdq660007ln0ljswu5vsw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://c0defreak.github.io/2016/02/16/python-virtualenv/" data-id="cikocdq77000aln0ldzv4t0m2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -260,16 +280,40 @@ ga('send', 'pageview');
 </script>
 
             
+    
+        <a href="http://c0defreak.github.io/2016/02/16/python-virtualenv/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/16/python-virtualenv/">Comments</a>
+    
+
         </footer>
     </div>
     
         
+<nav id="article-nav">
+    
+    
+        <a href="/2016/02/15/python-connection/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Checking internet connection with python</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
 
 
     
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -400,13 +444,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'devnulls';
     
     
-    var disqus_url = 'http://c0defreak.github.io/projects/index.html';
+    var disqus_url = 'http://c0defreak.github.io/2016/02/16/python-virtualenv/';
     
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
