@@ -3,18 +3,27 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hexo | /dev/null</title>
+    <title>Create a Hexo blog and deploy to Github | /dev/null</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
+    <meta name="description" content="Hexo is a great static site generator. With some minor configuration you can create a great hexo site.
+So here is the tutorial
+For hexo you need node.js and npm installed on your system.
+Install Hexo1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://c0defreak.github.io/2016/02/14/Hexo/index.html">
+<meta property="og:title" content="Create a Hexo blog and deploy to Github">
+<meta property="og:url" content="http://c0defreak.github.io/2016/02/15/hexo-github/index.html">
 <meta property="og:site_name" content="/dev/null">
-<meta property="og:description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
-<meta property="og:updated_time" content="2016-02-15T07:00:41.348Z">
+<meta property="og:description" content="Hexo is a great static site generator. With some minor configuration you can create a great hexo site.
+So here is the tutorial
+For hexo you need node.js and npm installed on your system.
+Install Hexo1">
+<meta property="og:updated_time" content="2016-02-15T07:02:01.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
+<meta name="twitter:title" content="Create a Hexo blog and deploy to Github">
+<meta name="twitter:description" content="Hexo is a great static site generator. With some minor configuration you can create a great hexo site.
+So here is the tutorial
+For hexo you need node.js and npm installed on your system.
+Install Hexo1">
     
 
     
@@ -146,7 +155,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-hexo-github" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -155,7 +164,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            Hexo
+            Create a Hexo blog and deploy to Github
         </h1>
     
 
@@ -163,13 +172,18 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/02/14/Hexo/">
-            <time datetime="2016-02-14T18:01:06.000Z" itemprop="datePublished">2016-02-14</time>
+        <a href="/2016/02/15/hexo-github/">
+            <time datetime="2016-02-15T06:59:02.000Z" itemprop="datePublished">2016-02-15</time>
         </a>
     </div>
 
 
                     
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
                     
     <div class="article-tag">
         <i class="fa fa-tag"></i>
@@ -182,16 +196,25 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="Changed-my-blogging-platform"><a href="#Changed-my-blogging-platform" class="headerlink" title="Changed my blogging platform"></a>Changed my blogging platform</h3><p>Recently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are awesome. Currently I’m using <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external">Icarus theme</a> which is just awesome.<br>Some features in hexo:<br><blockquote><ul>
-<li>Markdown support</li>
-<li>Awesome theme</li>
-<li>Plugin </li>
-<li>One command and hassle free deployment e.g for me just add settings in _config.yaml and type hexo deploy</li>
-<li>Live reload just type “hexo server” command and type your post and save it. And reload the browser(even no need to reload if you use the plugin <code>hexo-browsersync</code>). No need to worry about generating the output.</li>
-<li>Tag Plugin see the doc <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">here</a></li>
-</ul>
-</blockquote></p>
-<p>Head over to this <a href="/2016/02/15/hexo-github/" title="link">link</a> for tutorial</p>
+            <p>Hexo is a great static site generator. With some minor configuration you can create a great hexo site.</p>
+<p>So here is the tutorial</p>
+<p>For hexo you need <code>node.js</code> and <code>npm</code> installed on your system.</p>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>If you are using linux use <code>sudo</code></p>
+<p>…Once you’re done with installing hexo run these<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>Now edit the _config.yml file as per your need. see the <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">doc</a></p>
+<h2 id="Starting-the-Server"><a href="#Starting-the-Server" class="headerlink" title="Starting the Server"></a>Starting the Server</h2><p>To view your site in a browser type<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<h2 id="Create-your-post"><a href="#Create-your-post" class="headerlink" title="Create your post"></a>Create your post</h2><p>To create a new post type<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"my first post"</span></span><br></pre></td></tr></table></figure></p>
+<p>You will find a new file named “my-first-post.md” created in the source/_posts/ folder</p>
+<p>Edit the file with your post content(markdown ofc)</p>
+<p>You can also create a draft by using<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft <span class="string">"my first draft post"</span></span><br></pre></td></tr></table></figure></p>
+<p>This will a create a new file named “my-first-draft-post.md” in source/_drafts/ folder</p>
+<h2 id="Generate-your-blog"><a href="#Generate-your-blog" class="headerlink" title="Generate your blog"></a>Generate your blog</h2><p>To Publish a draft post<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish my-first-draft-post</span><br></pre></td></tr></table></figure></p>
+<p>And finally generate the site.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>Now start the server again and you will find your post</p>
+<h2 id="Publish-to-github"><a href="#Publish-to-github" class="headerlink" title="Publish to github"></a>Publish to github</h2><p>Create a new repository in your github account with name <code>&lt;your-username&gt;.github.io</code> and copy the repo url</p>
+<p>install hexo-deployer-git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>Type this to tell who you are<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"YOUR NAME"</span></span><br><span class="line">git config --global user.email <span class="string">"YOUR EMAIL ADDRESS"</span></span><br></pre></td></tr></table></figure><br>Edit your _config.yml to include this<br><figure class="highlight"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;  type: git&#10;  repo: &#60;your repo url&#62;</span><br></pre></td></tr></table></figure><br>And finally type<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
 
         
         </div>
@@ -202,7 +225,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://c0defreak.github.io/2016/02/14/Hexo/" data-id="ciknmthxy000gz50lsrxz6ubz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://c0defreak.github.io/2016/02/15/hexo-github/" data-id="ciknmthxs000bz50l66nun682" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -270,7 +293,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="http://c0defreak.github.io/2016/02/14/Hexo/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/14/Hexo/">Comments</a>
+        <a href="http://c0defreak.github.io/2016/02/15/hexo-github/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/15/hexo-github/">Comments</a>
     
 
         </footer>
@@ -279,19 +302,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2016/02/15/hexo-github/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    Create a Hexo blog and deploy to Github
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/02/14/Django-Bookmarks/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/02/14/Hexo/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Django Bookmarks</div>
+            <div class="article-nav-title">Hexo</div>
         </a>
     
 </nav>
@@ -424,7 +438,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'devnulls';
     
     
-    var disqus_url = 'http://c0defreak.github.io/2016/02/14/Hexo/';
+    var disqus_url = 'http://c0defreak.github.io/2016/02/15/hexo-github/';
     
     (function() {
     var dsq = document.createElement('script');

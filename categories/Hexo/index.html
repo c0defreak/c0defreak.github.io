@@ -3,18 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hexo | /dev/null</title>
+    <title>Category: Hexo | /dev/null</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://c0defreak.github.io/2016/02/14/Hexo/index.html">
+    <meta name="description" content="code, coffee and stuffs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="/dev/null">
+<meta property="og:url" content="http://c0defreak.github.io/categories/Hexo/index.html">
 <meta property="og:site_name" content="/dev/null">
-<meta property="og:description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
-<meta property="og:updated_time" content="2016-02-15T07:00:41.348Z">
+<meta property="og:description" content="code, coffee and stuffs">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Changed my blogging platformRecently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are aweso">
+<meta name="twitter:title" content="/dev/null">
+<meta name="twitter:description" content="code, coffee and stuffs">
     
 
     
@@ -146,173 +145,62 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+            <section id="main">
+        <section class="archives-wrap">
+        <div class="archive-category-wrap">
+            <span class="archive-category">Hexo</span>
+        </div>
+        <div class="archives">
         
-        
-        
-            <header class="article-header">
-                
+            <article class="archive-article archive-type-summary">
     
-        <h1 class="article-title" itemprop="name">
-            Hexo
+    <div class="archive-article-content">
+        <header class="archive-article-header">
+            
+    
+        <h1 itemprop="name">
+            <a class="archive-article-title" href="/2016/02/15/hexo-github/">Create a Hexo blog and deploy to Github</a>
         </h1>
     
 
-                <div class="article-meta">
-                    
+            <div class="article-meta">
+                
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/02/14/Hexo/">
-            <time datetime="2016-02-14T18:01:06.000Z" itemprop="datePublished">2016-02-14</time>
+        <a href="/2016/02/15/hexo-github/">
+            <time datetime="2016-02-15T06:59:02.000Z" itemprop="datePublished">2016-02-15</time>
         </a>
     </div>
 
 
-                    
-                    
+                
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
+                
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Hexo/">Hexo</a>
     </div>
 
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h3 id="Changed-my-blogging-platform"><a href="#Changed-my-blogging-platform" class="headerlink" title="Changed my blogging platform"></a>Changed my blogging platform</h3><p>Recently I’ve switched from pelican(which was based on python) to Hexo(based on nodejs). I think I’ve made a right decision by switching. Hexo’s theme and plugins are awesome. Currently I’m using <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external">Icarus theme</a> which is just awesome.<br>Some features in hexo:<br><blockquote><ul>
-<li>Markdown support</li>
-<li>Awesome theme</li>
-<li>Plugin </li>
-<li>One command and hassle free deployment e.g for me just add settings in _config.yaml and type hexo deploy</li>
-<li>Live reload just type “hexo server” command and type your post and save it. And reload the browser(even no need to reload if you use the plugin <code>hexo-browsersync</code>). No need to worry about generating the output.</li>
-<li>Tag Plugin see the doc <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">here</a></li>
-</ul>
-</blockquote></p>
-<p>Head over to this <a href="/2016/02/15/hexo-github/" title="link">link</a> for tutorial</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://c0defreak.github.io/2016/02/14/Hexo/" data-id="ciknmthxy000gz50lsrxz6ubz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://c0defreak.github.io/2016/02/14/Hexo/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/14/Hexo/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/02/15/hexo-github/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    Create a Hexo blog and deploy to Github
-                
             </div>
-        </a>
-    
-    
-        <a href="/2016/02/14/Django-Bookmarks/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Django Bookmarks</div>
-        </a>
-    
-</nav>
-
-
-    
-</article>
-
-
-    
-    <section id="comments">
-    
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </header>
+        <div class="article-entry">
+            <p>Hexo is a great static site generator. With some minor configuration you can create a great hexo site.
+So here is the tutorial
+For hexo you need node.js and npm installed on your system.
+Install Hexo1</p>
+            <p class="article-more-link">
+                <a href="/2016/02/15/hexo-github/#more">Read More</a>
+            </p>
+        </div>
     </div>
-
-    
-    </section>
-
-</section>
+</article>
+        
+        </div></section>
+        </section>
             
                 <aside id="sidebar">
     
@@ -424,13 +312,11 @@ ga('send', 'pageview');
     var disqus_shortname = 'devnulls';
     
     
-    var disqus_url = 'http://c0defreak.github.io/2016/02/14/Hexo/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

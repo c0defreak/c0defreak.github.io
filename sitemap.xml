@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://c0defreak.github.io/404.html</loc>
+    
+    <lastmod>2016-02-15T07:51:36.652Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://c0defreak.github.io/2016/02/15/hexo-github/</loc>
+    
+    <lastmod>2016-02-15T07:02:01.542Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://c0defreak.github.io/2016/02/14/Hexo/</loc>
     
-    <lastmod>2016-02-14T18:21:58.033Z</lastmod>
+    <lastmod>2016-02-15T07:00:41.348Z</lastmod>
     
   </url>
   
