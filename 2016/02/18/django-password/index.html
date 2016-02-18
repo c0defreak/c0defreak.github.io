@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>projects | /dev/null</title>
+    <title>How to keep track of users password and prevent using a previous password in Django | /dev/null</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:type" content="website">
-<meta property="og:title" content="projects">
-<meta property="og:url" content="http://c0defreak.github.io/projects/index.html">
+    <meta name="description" content="Many times we want to prevent our user using a previously used password for security reasons. Here’s how to do it with Django
+Create your modelsmodels.py1234567from django.db import modelsfrom django.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to keep track of users password and prevent using a previous password in Django">
+<meta property="og:url" content="http://c0defreak.github.io/2016/02/18/django-password/index.html">
 <meta property="og:site_name" content="/dev/null">
-<meta property="og:description" content="Here Some recent project done by me
-Django-Bookmarks">
-<meta property="og:updated_time" content="2016-02-14T15:47:01.916Z">
+<meta property="og:description" content="Many times we want to prevent our user using a previously used password for security reasons. Here’s how to do it with Django
+Create your modelsmodels.py1234567from django.db import modelsfrom django.">
+<meta property="og:updated_time" content="2016-02-18T18:36:04.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="projects">
-<meta name="twitter:description" content="Here Some recent project done by me
-Django-Bookmarks">
+<meta name="twitter:title" content="How to keep track of users password and prevent using a previous password in Django">
+<meta name="twitter:description" content="Many times we want to prevent our user using a previously used password for security reasons. Here’s how to do it with Django
+Create your modelsmodels.py1234567from django.db import modelsfrom django.">
     
 
     
@@ -149,7 +149,7 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-django-password" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -158,7 +158,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            projects
+            How to keep track of users password and prevent using a previous password in Django
         </h1>
     
 
@@ -166,23 +166,39 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/projects/index.html">
-            <time datetime="2016-02-14T11:02:35.000Z" itemprop="datePublished">2016-02-14</time>
+        <a href="/2016/02/18/django-password/">
+            <time datetime="2016-02-18T18:28:30.000Z" itemprop="datePublished">2016-02-18</time>
         </a>
     </div>
 
 
                     
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Django/">Django</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Django/Python/">Python</a>
+    </div>
+
                     
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Django/">Django</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
                 </div>
             </header>
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="Here-Some-recent-project-done-by-me"><a href="#Here-Some-recent-project-done-by-me" class="headerlink" title="Here Some recent project done by me"></a>Here Some recent project done by me</h3><ul>
-<li><a href="https://github.com/c0defreak/Django-bookmarks" target="_blank" rel="external">Django-Bookmarks</a></li>
-</ul>
+            <p>Many times we want to prevent our user using a previously used password for security reasons. Here’s how to do it with Django</p>
+<h2 id="Create-your-models"><a href="#Create-your-models" class="headerlink" title="Create your models"></a>Create your models</h2><figure class="highlight python"><figcaption><span>models.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordLog</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    user = models.ForeignKey(User)</span><br><span class="line">    password = models.CharField(max_length=<span class="number">16</span>)</span><br></pre></td></tr></table></figure>
+<p>This model creates a relationship with <code>User</code>model and create a charfield for storing the passwords.</p>
+<h2 id="The-Views"><a href="#The-Views" class="headerlink" title="The Views"></a>The Views</h2><p>use this code in your <code>views.py</code>(Usually in register and change password methods)</p>
+<figure class="highlight python"><figcaption><span>views.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> authenticate, update_session_auth_hash</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.hashers <span class="keyword">import</span> check_password</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> PasswordLog</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">register_page</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="string">'''Your register code here'''</span></span><br><span class="line">    user = User.objects.get(user=user)</span><br><span class="line">    password_log = PasswordLog()</span><br><span class="line">    password_log.user = user</span><br><span class="line">    password_log.password = user.password</span><br><span class="line">    password_log.save()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_password_page</span><span class="params">(request)</span>:</span></span><br><span class="line">    state = <span class="string">''</span></span><br><span class="line">    <span class="keyword">if</span> request.user.is_authenticated():</span><br><span class="line">        user = request.user</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'c_password'</span> <span class="keyword">in</span> request.POST <span class="keyword">and</span> <span class="string">'n_password'</span> <span class="keyword">in</span> request.POST:</span><br><span class="line">        c_password = request.POST.get(<span class="string">'c_password'</span>)</span><br><span class="line">        n_password = request.POST.get(<span class="string">'n_password'</span>)</span><br><span class="line">        validate = _validate_password(n_password, user)</span><br><span class="line">        auth_user = authenticate(username=user.username, password=c_password)</span><br><span class="line">        <span class="keyword">if</span> auth_user <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">and</span> validate:</span><br><span class="line">            u = User.objects.get(username=user.username)</span><br><span class="line">            u.set_password(n_password)</span><br><span class="line">            u.save()</span><br><span class="line">            update_session_auth_hash(request, u)</span><br><span class="line">            password_log = PasswordLog()</span><br><span class="line">            password_log.user = u</span><br><span class="line">            password_log.password = u.password</span><br><span class="line">            password_log.save()</span><br><span class="line">            state = <span class="string">'password change success'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            state = <span class="string">'wrong current password or \</span><br><span class="line">            entered a previously used password'</span></span><br><span class="line">    variables = &#123;</span><br><span class="line">        <span class="string">'state'</span>: state,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'myapp/change_password.html'</span>, context=variables)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_validate_password</span><span class="params">(password, user)</span>:</span></span><br><span class="line">    p_logs = PasswordLog.objects.filter(user=user)</span><br><span class="line">    <span class="keyword">for</span> p_log <span class="keyword">in</span> p_logs:</span><br><span class="line">        <span class="keyword">if</span> check_password(password, p_log.password):</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p>In register method we update the passwordlog object to include the newly created password.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">validate = _validate_password(n_password,user)</span><br><span class="line">auth_user = authenticate(username=user.username, password=c_password)</span><br><span class="line"><span class="keyword">if</span> auth_user <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">and</span> validate:</span><br><span class="line">    u = User.objects.get(username=user.username)</span><br><span class="line">    u.set_password(n_password)</span><br><span class="line">    u.save()</span><br><span class="line">    update_session_auth_hash(request, u)</span><br><span class="line">    password_log = PasswordLog()</span><br><span class="line">    password_log.user = u</span><br><span class="line">    password_log.password = u.password</span><br><span class="line">    password_log.save()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_validate_password</span><span class="params">(password, user)</span>:</span></span><br><span class="line">    p_logs = PasswordLog.objects.filter(user=user)</span><br><span class="line">    <span class="keyword">for</span> p_log <span class="keyword">in</span> p_logs:</span><br><span class="line">        <span class="keyword">if</span> check_password(password, p_log.password):</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p>In this section we iterate through the passwordlog objects to check if the new password matches with one of the previous password and check if a user is entering the correct current password. If both check passes we set the new password for the user and login again with <code>update_session_auth_hash</code> and ofcourse update the passwordlog object.</p>
+<p><a href="https://github.com/c0defreak/user-password" target="_blank" rel="external">Here</a> you can get the full project code</p>
 
         
         </div>
@@ -193,7 +209,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://c0defreak.github.io/projects/index.html" data-id="cikslzdud0007jn0l3jjwmsxa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://c0defreak.github.io/2016/02/18/django-password/" data-id="cikslzdvu000njn0loapy6z4t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -260,16 +276,40 @@ ga('send', 'pageview');
 </script>
 
             
+    
+        <a href="http://c0defreak.github.io/2016/02/18/django-password/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://c0defreak.github.io/2016/02/18/django-password/">Comments</a>
+    
+
         </footer>
     </div>
     
         
+<nav id="article-nav">
+    
+    
+        <a href="/2016/02/16/python-virtualenv/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Getting started python virtualenvwrapper</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
 
 
     
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -400,13 +440,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'devnulls';
     
     
-    var disqus_url = 'http://c0defreak.github.io/projects/index.html';
+    var disqus_url = 'http://c0defreak.github.io/2016/02/18/django-password/';
     
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://c0defreak.github.io/2016/02/18/django-password/</loc>
+    
+    <lastmod>2016-02-18T18:36:04.447Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://c0defreak.github.io/2016/02/16/python-virtualenv/</loc>
     
     <lastmod>2016-02-15T18:56:10.824Z</lastmod>
